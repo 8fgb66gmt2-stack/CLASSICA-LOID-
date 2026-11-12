@@ -1,0 +1,89 @@
+[
+  {
+    "slug": "saint-germain",
+    "name": "サン・ジェルマン",
+    "number": "01",
+    "summary": "ムジーク《月光》《葬送行進曲》《死の舞踏》に関する記録を持つ人物。",
+    "voiceActorCandidate": "平川大輔",
+    "confirmedFacts": {
+      "RELATIONSHIP": "ジャンヌとは異父兄弟。",
+      "MUSEK": "《月光》《葬送行進曲》《死の舞踏》"
+    }
+  },
+  {
+    "slug": "jeanne",
+    "name": "ジャンヌ・ヴィラール",
+    "number": "02",
+    "summary": "サン・ジェルマンの異父弟。",
+    "voiceActorCandidate": "斉藤壮馬",
+    "confirmedFacts": {
+      "GENDER": "男性",
+      "RELATIONSHIP": "サン・ジェルマンとは異父兄弟。",
+      "AFFECTION": "ラフィネを愛しているが、兄とラフィネの関係を壊すことは望まない。"
+    }
+  },
+  {
+    "slug": "narukami-ritsu",
+    "name": "鳴神 律",
+    "number": "03",
+    "summary": "鳴神兄弟の兄。",
+    "voiceActorCandidate": "石川界人",
+    "confirmedFacts": {
+      "RELATIONSHIP": "鳴神眞の兄。"
+    }
+  },
+  {
+    "slug": "narukami-makoto",
+    "name": "鳴神 眞",
+    "number": "04",
+    "summary": "鳴神兄弟の弟。",
+    "voiceActorCandidate": "村瀬歩",
+    "confirmedFacts": {
+      "RELATIONSHIP": "鳴神律の弟。"
+    }
+  },
+  {
+    "slug": "yukiyanagi-zansetsu",
+    "name": "雪柳 残雪",
+    "number": "05",
+    "summary": "音樂担当案は、じょるじん。",
+    "voiceActorCandidate": "櫻井孝宏",
+    "confirmedFacts": {
+      "FAMILY": "大窪晶与の実兄。",
+      "MUSIC": "じょるじん（担当案）"
+    }
+  },
+  {
+    "slug": "roma-kamon",
+    "name": "羅馬 神門",
+    "number": "06",
+    "summary": "雪柳残雪とは異なる人物。音樂担当案は、じょるじん。",
+    "voiceActorCandidate": "中村悠一",
+    "confirmedFacts": {
+      "MUSIC": "じょるじん（担当案）",
+      "NOTE": "雪柳残雪とは別人物。"
+    }
+  },
+  {
+    "slug": "kannagi-aya",
+    "name": "巫覡 亞矢",
+    "number": "07",
+    "summary": "輝矢との主従関係と、家族的な結びつきを持つ男性。",
+    "voiceActorCandidate": "未定",
+    "confirmedFacts": {
+      "GENDER": "男性",
+      "RELATIONSHIP": "輝矢とは主従関係にあり、家族的な結びつきも持つ。",
+      "MUSIC": "Kanaria（担当案）"
+    }
+  },
+  {
+    "slug": "restia-ashmiel",
+    "name": "レスティア・アシュミール",
+    "number": "08",
+    "summary": "音樂担当案は、誤植P。",
+    "voiceActorCandidate": "島﨑信長",
+    "confirmedFacts": {
+      "MUSIC": "誤植P（担当案）"
+    }
+  }
+]

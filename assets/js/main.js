@@ -1,16 +1,4 @@
-(() => {
-  const toggle = document.querySelector(".nav-toggle");
-  const nav = document.querySelector("#global-nav");
-  if (!toggle || !nav) return;
-  toggle.addEventListener("click", () => {
-    const opened = toggle.getAttribute("aria-expanded") === "true";
-    toggle.setAttribute("aria-expanded", String(!opened));
-    nav.classList.toggle("is-open", !opened);
-  });
-  nav.querySelectorAll("a").forEach(link => {
-    link.addEventListener("click", () => {
-      toggle.setAttribute("aria-expanded", "false");
-      nav.classList.remove("is-open");
-    });
-  });
-})();
+(()=>{"use strict";document.documentElement.classList.add("js");const toggle=document.querySelector(".nav-toggle"),nav=document.querySelector("#global-nav");const close=()=>{if(!toggle||!nav)return;toggle.setAttribute("aria-expanded","false");toggle.setAttribute("aria-label","メニューを開く");nav.classList.remove("is-open")};if(toggle&&nav){toggle.addEventListener("click",()=>{const open=toggle.getAttribute("aria-expanded")!=="true";toggle.setAttribute("aria-expanded",String(open));toggle.setAttribute("aria-label",open?"メニューを閉じる":"メニューを開く");nav.classList.toggle("is-open",open)});nav.querySelectorAll("a").forEach(a=>a.addEventListener("click",close));document.addEventListener("keydown",e=>{if(e.key==="Escape")close()});window.addEventListener("resize",()=>{if(innerWidth>820)close()},{passive:true})}
+const root=document.body.dataset.root||"./",feeds=document.querySelectorAll("[data-news-feed]");if(feeds.length){fetch(root+"assets/data/news.json").then(r=>{if(!r.ok)throw Error("news");return r.json()}).then(items=>feeds.forEach(feed=>{const list=Array.isArray(items)?items.slice(0,Number(feed.dataset.limit||items.length)):[];feed.innerHTML=list.length?list.map(x=>'<a class="news-row" href="'+safeUrl(x.url)+'"><time>'+esc(x.date||"")+'</time><span class="news-category">'+esc(x.category||"INFORMATION")+'</span><span class="news-title">'+esc(x.title||"")+'</span><span class="news-arrow" aria-hidden="true">↗</span></a>').join(""):'<p class="empty-note">現在、公開中のニュースはありません。</p>'})).catch(()=>feeds.forEach(f=>f.innerHTML='<p class="empty-note">ニュース情報を読み込めませんでした。</p>'))}
+const form=document.querySelector("#musek-checker");if(form){const result=document.querySelector("#puzzle-result"),fragment=document.querySelector("#archive-fragment"),key="classicaloid.archive.musek01",reveal=()=>{if(fragment)fragment.hidden=false;if(result)result.textContent="照合済み。ARCHIVE No.08 / FRAGMENT 01 が開封されました。";try{localStorage.setItem(key,"complete")}catch(e){}};try{if(localStorage.getItem(key)==="complete")reveal()}catch(e){}form.addEventListener("submit",e=>{e.preventDefault();const v=new FormData(form),ok=v.get("healing")==="《月光》"&&v.get("harmful")==="《葬送行進曲》"&&v.get("revival")==="《死の舞踏》";if(ok){reveal();fragment?.scrollIntoView({behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"center"})}else if(result)result.textContent="照合不一致。MUSIC ARCHIVEのムジーク記録を、もう一度確認してください。"})}
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}function safeUrl(s){if(!s)return"#";try{const u=new URL(s,location.href);return /^https?:$/.test(u.protocol)?u.href:"#"}catch(e){return"#"}}})();

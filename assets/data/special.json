@@ -1,0 +1,42 @@
+[
+  {
+    "category": "SPECIAL MOVIE",
+    "title": "映像コンテンツ",
+    "status": "coming-soon"
+  },
+  {
+    "category": "PROMOTION VIDEO",
+    "title": "プロモーション映像",
+    "status": "coming-soon"
+  },
+  {
+    "category": "CHARACTER MOVIE",
+    "title": "キャラクタームービー",
+    "status": "coming-soon"
+  },
+  {
+    "category": "WALLPAPER",
+    "title": "壁紙",
+    "status": "coming-soon"
+  },
+  {
+    "category": "INTERVIEW",
+    "title": "インタビュー",
+    "status": "coming-soon"
+  },
+  {
+    "category": "MUSIC COMMENTARY",
+    "title": "音樂解説",
+    "status": "coming-soon"
+  },
+  {
+    "category": "ILLUSTRATION GALLERY",
+    "title": "イラストレーション",
+    "status": "coming-soon"
+  },
+  {
+    "category": "ARCHIVE DOCUMENT",
+    "title": "アーカイブ資料",
+    "status": "coming-soon"
+  }
+]
